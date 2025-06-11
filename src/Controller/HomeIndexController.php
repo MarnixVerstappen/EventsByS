@@ -4,20 +4,13 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\Routing\Annotation\Route;
 
-final class HomeIndexController extends AbstractController
+class HomeIndexController extends AbstractController
 {
-    #[Route('/delete', name: 'app_home_index')]
+    #[Route('/', name: 'app_home')]
     public function index(): Response
     {
-        if ($this->getUser() && in_array('ROLE_ADMIN', $this->getUser()->getRoles(), true)) {
-            return $this->render('home_index/index.html.twig', [
-                'controller_name' => 'HomeIndexController',
-            ]);
-        }
-         else {
-            return $this->redirect('https://google.com/');
-        }
+        return $this->render('home/index.html.twig');
     }
 }

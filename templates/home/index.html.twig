@@ -1,0 +1,184 @@
+{% extends 'base.html.twig' %}
+{% block title %}Events by S{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <!-- Optional: add Bootstrap via CDN if not present -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <style>
+        .fadein-scroll {
+            opacity: 0;
+            transition: opacity 0.7s cubic-bezier(.4,0,.2,1);
+        }
+        .fadein-scroll.visible {
+            opacity: 1;
+        }
+        .soft-card {
+            border-radius: 18px;
+            background: rgba(243,236,228,0.7);
+            box-shadow: 0 6px 30px -10px #e8e7db;
+            border: none;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid py-4 bg-light border-bottom shadow-sm" style="background: linear-gradient(120deg,#f7f3ea 80%,#f7e8e6 100%);">
+    <div class="text-center mb-3">
+        <img src="/image/logo.jpg" alt="Events by S Logo" style="max-width:110px;" class="mb-2 fadein-scroll">
+        <h1 class="display-6 fw-bold mb-1 fadein-scroll" style="font-family:'Playfair Display',serif;">Events by S</h1>
+        <p class="fst-italic text-secondary fadein-scroll">Votre événement sur mesure</p>
+    </div>
+</div>
+
+<!-- HERO: Portrait & Quote -->
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-7 mb-4 mx-auto">
+            <div class="card soft-card p-4 shadow-sm text-center fadein-scroll">
+                <img src="/image/sanne.jpg" class="rounded mx-auto mb-3 shadow" alt="Photo Sanne" style="max-width:240px;">
+                <div>
+                    <span class="fw-semibold text-primary small">Je parle le français, le néerlandais et l'anglais</span>
+                </div>
+                <blockquote class="blockquote fs-4 mt-3 mb-1">
+                    <p>« Passionnée et à l’écoute, je m’engage à rendre chaque instant unique et à la hauteur de vos attentes. »</p>
+                </blockquote>
+                <div class="text-muted mb-2">
+                    Animée par la passion et l’écoute, je m’engage à faire de chaque moment une expérience unique, où chaque instant mérite d’être inoubliable.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- About Section -->
+<div class="container mb-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="card soft-card p-4 shadow-sm fadein-scroll">
+                <h2 class="mb-3" style="color:#b3805a;">À propos de moi</h2>
+                <p>
+                    Je m'appelle Sanne et l'organisation d'événements a <b>toujours été une passion</b> pour moi.
+                    Dès mon enfance, j’adorais orchestrer les moments spéciaux en famille, ce qui m’a naturellement menée vers le domaine de l’événementiel.<br><br>
+                    <b>Titulaire d’un bachelier en gestion hôtelière</b>, je travaille depuis actuellement 4 ans dans un hôtel, où j’ai la chance d’organiser des événements annuels. J’y prends un réel plaisir : faire sourire les clients, imaginer des moments sur mesure et rendre chaque instant inoubliable sont devenus mon quotidien. J’aime sortir des sentiers battus et proposer des options même non prévues à la carte, afin de répondre au mieux à vos envies et besoins.<br><br>
+                    Je n’ai pas peur du défi, même face à l’inconnu, je n’hésite pas à plonger pieds joints et à me lancer à fond. J’aime relever de nouveaux challenges, trouver des solutions créatives et faire de chaque évènement une réussite, peu importe les circonstances.<br><br>
+                    Aujourd’hui, je mets ma <b>créativité</b> et mon <b>expérience</b> à votre service pour concevoir des événements uniques. <b>Mon objectif est de vous offrir un service sur mesure, centré sur vos envies et de créer des souvenirs inoubliables. </b>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Events Types -->
+<div class="container mb-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card soft-card p-4 shadow-sm fadein-scroll">
+                <h2 class="mb-3" style="color:#b3805a;">Quelques exemples d’événements que j’adore organiser</h2>
+                <ul class="list-unstyled fs-5 mb-0">
+                    <li>Anniversaires (pour petits et grands)</li>
+                    <li>Brunchs - Petits déjeuners</li>
+                    <li>Fêtes surprises (ou pas)</li>
+                    <li>Petits mariages</li>
+                    <li>Retrouvailles entre amis ou entre collègues</li>
+                    <li>Baby Shower</li>
+                    <li>Départ à la retraite</li>
+                    <li>Fiançailles</li>
+                    <li>Crémaillères</li>
+                    <li>Gender Reveal</li>
+                    <li>Welcome Baby</li>
+                    <li>Baptêmes</li>
+                    <li class="fw-bold text-primary">Tout autre événement selon vos envies</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Services -->
+<div class="container mb-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="card soft-card p-4 shadow-sm fadein-scroll">
+                <h2 class="mb-4" style="color:#b3805a;">Ce que je prends en main pour vous</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="fs-5">
+                            <li>Création de petites restaurations savoureuses (zakouskis, sandwichs, petits fours, etc.)</li>
+                            <li>Candy bar</li>
+                            <li>Bar à crêpes</li>
+                            <li>Buffet sucré/salé</li>
+                            <li>Cupcakes</li>
+                            <li>Décoration personnalisée et soignée, mise en place comprise</li>
+                            <li>Conseils en décoration</li>
+                            <li>D'autres conseils utiles</li>
+                            <li>Achat de vos décorations (sous forme de location de matériel)</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="fs-5">
+                            <li>Accueil des invités</li>
+                            <li>Suivi rigoureux du bon déroulement de la journée</li>
+                            <li>Coordination des autres prestataires présents, pour vous assurer un maximum de sérénité</li>
+                            <li>Respect absolu de votre budget</li>
+                            <li>Option de nettoyage après votre événement</li>
+                            <li class="fw-bold text-primary">Organisation complète de votre événement, de A à Z</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="container mb-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-5 mb-4 text-center">
+                <div class="card soft-card p-4 shadow-sm d-inline-block fadein-scroll">
+                    <img src="/image/qrcode.jpg" alt="QR Code" style="width:130px;">
+                    <div class="mt-2 small text-muted">
+                        Retrouvez-moi sur Facebook ! <br> (Scannez-moi)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact & Call to Action -->
+    <div class="container mb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card soft-card p-4 shadow-sm text-center fadein-scroll">
+                    <h3 class="mb-4" style="color:#b3805a;">Confiez-moi vos idées et laissez-moi les transformer en un événement exceptionnel !</h3>
+                    <a href="mailto:info@eventsbys.be" class="btn btn-primary btn-lg shadow mb-3">Contactez-moi</a>
+                    <div class="text-muted">
+                        <div>Place Lothiers 2, 6940 Wéris, Durbuy</div>
+                        <div>
+                            <a href="tel:+32466967638" class="text-decoration-none me-2">0032 466967638</a>
+                            <a href="mailto:info@eventsbys.be" class="text-decoration-none me-2">info@eventsbys.be</a>
+                            <a href="https://www.eventsbys.be" target="_blank" rel="noopener" class="text-decoration-none">www.eventsbys.be</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fade-In On Scroll SCRIPT -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const observer = new window.IntersectionObserver(
+                entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            // Uncomment below to re-trigger animation every time
+                            // entry.target.classList.remove('visible');
+                        }
+                    });
+                },
+                { threshold: 0.15 }
+            );
+            document.querySelectorAll('.fadein-scroll').forEach(el => observer.observe(el));
+        });
+    </script>
+{% endblock %}
